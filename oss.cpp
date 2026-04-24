@@ -17,7 +17,7 @@ using namespace std;
 
 #define PERMS 0644
 #define MAX_RES 10
-#define MAX_INST 1
+#define MAX_INST 5
 #define MAXIMUM_PROCESS 20
 
 const int BUFF_SZ = sizeof(int) * 2;
@@ -155,6 +155,36 @@ void initProcessTable()
     }
 }
 
+void printProcessTableAndBlocked()
+{
+    stringstream out;
+
+    out << "\nOSS PID:" << getpid()
+        << " SysClockS:" << customClock[0]
+        << " SysClockNano:" << customClock[1] << "\n";
+
+    out << "Entry Occupied PID Blocked RequestedResource\n";
+
+    for (int i = 0; i < MAXIMUM_PROCESS; i++)
+    {
+        out << i << " "
+            << processTable[i].occupied << " "
+            << processTable[i].pid << " "
+            << processTable[i].blocked << " "
+            << processTable[i].requestedResource << "\n";
+    }
+
+    out << "Blocked processes: ";
+    for (int i = 0; i < MAXIMUM_PROCESS; i++)
+    {
+        if (processTable[i].occupied && processTable[i].blocked)
+            out << "P" << i << "(R" << processTable[i].requestedResource << ") ";
+    }
+
+    out << "\n";
+
+    logmsg(out.str());
+}
 void printResourceTable()
 {
     stringstream out;
@@ -399,6 +429,11 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    if (s < 1 || s > 18)
+    {
+        cerr << "Error: -s must be between 1 and 15.\n";
+        return 1;
+    }
     if (s > n)
         s = n;
 
@@ -471,6 +506,8 @@ int main(int argc, char *argv[])
     int workerSec = 0;
     int workerNano = 0;
 
+    int lastPrintSec = 0;
+    int lastPrintNano = 0;
     pid_t ossPid = getpid();
 
     static int lastDeadlockCheckSec = -1;
@@ -480,6 +517,17 @@ int main(int argc, char *argv[])
         int nextLaunchSec = lastLaunchSec + intervalSec;
         int nextLaunchNano = lastLaunchNano + intervalNano;
         normalizeTime(nextLaunchSec, nextLaunchNano);
+
+        int printSec = lastPrintSec;
+        int printNano = lastPrintNano + 500000000;
+        normalizeTime(printSec, printNano);
+
+        if (timeReached(printSec, printNano))
+        {
+            printProcessTableAndBlocked();
+            lastPrintSec = *sec;
+            lastPrintNano = *nano;
+        }
 
         if (launched < n &&
             active < s &&

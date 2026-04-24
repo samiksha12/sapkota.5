@@ -1,107 +1,113 @@
-Master has detected Process P0 requesting R1 at time 0:0
-Master granting P0 request R1 at time 0:0
-Master has detected Process P1 requesting R3 at time 0:250000000
-Master granting P1 request R3 at time 0:250000000
+Master has detected Process P0 requesting R8 at time 0:0
+Master granting P0 request R8 at time 0:0
+Master has detected Process P1 requesting R7 at time 0:250000000
+Master granting P1 request R7 at time 0:250000000
 Master has detected Process P0 requesting R4 at time 0:375000000
 Master granting P0 request R4 at time 0:375000000
-Master has acknowledged Process P1 releasing R3 at time 0:500000000
-Master has detected Process P2 requesting R2 at time 0:583333333
-Master granting P2 request R2 at time 0:583333333
-Master has detected Process P0 requesting R2 at time 0:666666666
-Master cannot grant P0 request for R2 at time 0:666666666; process goes to sleep
-Master running deadlock detection at time 0:749999999:
-Master has detected Process P1 requesting R1 at time 0:749999999
-Master cannot grant P1 request for R1 at time 0:749999999; process goes to sleep
-Master has detected Process P2 requesting R7 at time 0:812499999
-Master granting P2 request R7 at time 0:812499999
-Master has detected Process P3 requesting R1 at time 0:874999999
-Master cannot grant P3 request for R1 at time 0:874999999; process goes to sleep
-Master has detected Process P2 requesting R3 at time 0:937499999
-Master granting P2 request R3 at time 0:937499999
-Master has detected Process P4 requesting R0 at time 0:999999999
-Master granting P4 request R0 at time 0:999999999
+Master has acknowledged Process P1 releasing R7 at time 0:500000000
+Master has detected Process P2 requesting R6 at time 0:583333333
+Master granting P2 request R6 at time 0:583333333
+Master has detected Process P0 requesting R3 at time 0:666666666
+Master granting P0 request R3 at time 0:666666666
+Master has detected Process P1 requesting R3 at time 0:749999999
+Master cannot grant P1 request for R3 at time 0:749999999; process goes to sleep
+Master running deadlock detection at time 0:812499999:
+Master has detected Process P2 requesting R8 at time 0:812499999
+Master cannot grant P2 request for R8 at time 0:812499999; process goes to sleep
+Master has detected Process P3 requesting R5 at time 0:874999999
+Master granting P3 request R5 at time 0:874999999
+Master has detected Process P0 requesting R7 at time 0:937499999
+Master granting P0 request R7 at time 0:937499999
+Master has detected Process P3 requesting R9 at time 0:999999999
+Master granting P3 request R9 at time 0:999999999
 Master running deadlock detection at time 1:49999999:
-Master has acknowledged Process P2 releasing R3 at time 1:49999999
-Master has detected Process P4 requesting R1 at time 1:99999999
-Master cannot grant P4 request for R1 at time 1:99999999; process goes to sleep
-Master has detected Process P2 requesting R3 at time 1:149999999
-Master granting P2 request R3 at time 1:149999999
-Master has detected Process P2 requesting R5 at time 1:199999999
-Master granting P2 request R5 at time 1:199999999
-Master has acknowledged Process P2 releasing R5 at time 1:249999999
-Master has acknowledged Process P2 releasing R3 at time 1:299999999
-Master has detected Process P2 requesting R3 at time 1:349999999
-Master granting P2 request R3 at time 1:349999999
-Master has detected Process P2 requesting R5 at time 1:399999999
-Master granting P2 request R5 at time 1:399999999
-Master has acknowledged Process P2 releasing R3 at time 1:449999999
-Master has acknowledged Process P2 releasing R5 at time 1:499999999
-Master has detected Process P2 requesting R5 at time 1:549999999
-Master granting P2 request R5 at time 1:549999999
-Master has detected Process P2 requesting R3 at time 1:599999999
-Master granting P2 request R3 at time 1:599999999
-Master has acknowledged Process P2 releasing R7 at time 1:649999999
-Master has detected Process P2 requesting R9 at time 1:699999999
-Master granting P2 request R9 at time 1:699999999
-Master has detected Process P2 requesting R1 at time 1:749999999
-Master cannot grant P2 request for R1 at time 1:749999999; process goes to sleep
+Master has detected Process P4 requesting R4 at time 1:49999999
+Master cannot grant P4 request for R4 at time 1:49999999; process goes to sleep
+Master has acknowledged Process P0 releasing R3 at time 1:99999999
+Master granting P1 request R3 at time 1:149999999
+Master has detected Process P1 requesting R0 at time 1:149999999
+Master granting P1 request R0 at time 1:149999999
+Master has detected Process P3 requesting R4 at time 1:199999999
+Master cannot grant P3 request for R4 at time 1:199999999; process goes to sleep
+Master has detected Process P0 requesting R0 at time 1:249999999
+Master cannot grant P0 request for R0 at time 1:249999999; process goes to sleep
+Master has detected Process P1 requesting R4 at time 1:299999999
+Master cannot grant P1 request for R4 at time 1:299999999; process goes to sleep
 Master running deadlock detection at time 2:49999999:
       Processes P0, P1, P2, P3, P4 deadlocked
       Attempting to resolve deadlock...
-      Killing process P0: Resources released are as follows: R1:1 R4:1 
-Master granting P1 request R1 at time 2:49999999
-Master has acknowledged Process P1 terminating at time 2:49999999
-Master granting P2 request R1 at time 2:133333332
-Master has detected Process P2 requesting R4 at time 2:133333332
-Master granting P2 request R4 at time 2:133333332
-Master has detected Process P2 requesting R6 at time 2:216666665
-Master granting P2 request R6 at time 2:216666665
-Master has detected Process P2 requesting R7 at time 2:299999998
-Master granting P2 request R7 at time 2:299999998
-Master has acknowledged Process P2 releasing R6 at time 2:383333331
-Master has detected Process P2 requesting R8 at time 2:466666664
-Master granting P2 request R8 at time 2:466666664
-Master has detected Process P2 requesting R6 at time 2:549999997
-Master granting P2 request R6 at time 2:549999997
-Master has acknowledged Process P2 releasing R8 at time 2:633333330
-Master has acknowledged Process P2 releasing R2 at time 2:716666663
-Master has acknowledged Process P2 terminating at time 2:799999996
-Master granting P3 request R1 at time 2:924999996
-Master has detected Process P3 requesting R9 at time 2:924999996
-Master granting P3 request R9 at time 2:924999996
-Current system resources at time 2:924999996
+      Killing process P0: Resources released are as follows: R4:1 R7:1 R8:1 
+Master granting P1 request R4 at time 2:49999999
+Master granting P2 request R8 at time 2:49999999
+Master has detected Process P2 requesting R3 at time 2:49999999
+Master cannot grant P2 request for R3 at time 2:49999999; process goes to sleep
+Master has detected Process P1 requesting R5 at time 2:112499999
+Master cannot grant P1 request for R5 at time 2:112499999; process goes to sleep
+Master running deadlock detection at time 3:49999999:
+      Processes P1, P2, P3, P4 deadlocked
+      Attempting to resolve deadlock...
+      Killing process P1: Resources released are as follows: R0:1 R3:1 R4:1 
+Master granting P2 request R3 at time 3:49999999
+Master granting P3 request R4 at time 3:49999999
+Master has acknowledged Process P2 terminating at time 3:49999999
+Master has detected Process P3 requesting R8 at time 3:174999999
+Master granting P3 request R8 at time 3:174999999
+Master has detected Process P3 requesting R6 at time 3:299999999
+Master granting P3 request R6 at time 3:299999999
+Master has acknowledged Process P3 releasing R6 at time 3:424999999
+Master has acknowledged Process P3 releasing R8 at time 3:549999999
+Master has detected Process P3 requesting R6 at time 3:674999999
+Master granting P3 request R6 at time 3:674999999
+Master has detected Process P3 requesting R2 at time 3:799999999
+Master granting P3 request R2 at time 3:799999999
+Master has acknowledged Process P3 releasing R5 at time 3:924999999
+Master running deadlock detection at time 4:49999999:
+Master has detected Process P3 requesting R7 at time 4:49999999
+Master granting P3 request R7 at time 4:49999999
+Master has detected Process P3 requesting R1 at time 4:174999999
+Master granting P3 request R1 at time 4:174999999
+Master has detected Process P3 requesting R8 at time 4:299999999
+Master granting P3 request R8 at time 4:299999999
+Master has acknowledged Process P3 releasing R7 at time 4:424999999
+Master has detected Process P3 requesting R7 at time 4:549999999
+Master granting P3 request R7 at time 4:549999999
+Master has detected Process P3 requesting R3 at time 4:674999999
+Master granting P3 request R3 at time 4:674999999
+Master has detected Process P3 requesting R5 at time 4:799999999
+Master granting P3 request R5 at time 4:799999999
+Master has detected Process P3 requesting R0 at time 4:924999999
+Master granting P3 request R0 at time 4:924999999
+Current system resources at time 4:924999999
 Total resources available:
-R0:0 R1:0 R2:1 R3:1 R4:1 R5:1 R6:1 R7:1 R8:1 R9:0 
+R0:0 R1:0 R2:0 R3:0 R4:0 R5:0 R6:0 R7:0 R8:0 R9:0 
 Resources allocated:
     R0 R1 R2 R3 R4 R5 R6 R7 R8 R9 
-P3  0  1  0  0  0  0  0  0  0  1  
-P4  1  0  0  0  0  0  0  0  0  0  
+P3  1  1  1  1  1  1  1  1  1  1  
+P4  0  0  0  0  0  0  0  0  0  0  
 
-Master running deadlock detection at time 3:49999996:
-Master has acknowledged Process P3 releasing R1 at time 3:49999996
-Master granting P4 request R1 at time 3:174999996
-Master has detected Process P4 requesting R4 at time 3:174999996
-Master granting P4 request R4 at time 3:174999996
-Master has detected Process P3 requesting R5 at time 3:299999996
-Master granting P3 request R5 at time 3:299999996
-Master has acknowledged Process P4 releasing R1 at time 3:424999996
-Master has acknowledged Process P3 releasing R5 at time 3:549999996
-Master has detected Process P4 requesting R8 at time 3:674999996
-Master granting P4 request R8 at time 3:674999996
-Master has detected Process P3 requesting R5 at time 3:799999996
-Master granting P3 request R5 at time 3:799999996
-Master has acknowledged Process P4 releasing R0 at time 3:924999996
-Master has acknowledged Process P3 terminating at time 4:49999996
-Master has acknowledged Process P4 terminating at time 4:299999996
+Master running deadlock detection at time 5:49999999:
+Master has acknowledged Process P3 releasing R0 at time 5:49999999
+Master has detected Process P3 requesting R0 at time 5:174999999
+Master granting P3 request R0 at time 5:174999999
+Master has acknowledged Process P3 releasing R1 at time 5:299999999
+Master has acknowledged Process P3 releasing R6 at time 5:424999999
+Master has detected Process P3 requesting R6 at time 5:549999999
+Master granting P3 request R6 at time 5:549999999
+Master has detected Process P3 requesting R1 at time 5:674999999
+Master granting P3 request R1 at time 5:674999999
+Master has acknowledged Process P3 releasing R2 at time 5:799999999
+Master has acknowledged Process P3 terminating at time 5:924999999
+Master granting P4 request R4 at time 6:174999999
+Master has acknowledged Process P4 terminating at time 6:174999999
 
 ===== FINAL STATISTICS =====
 Processes launched: 5
-Normal terminations: 4
-Requests: 29
-Granted: 24
-Blocked: 5
-Releases: 14
-Deadlock checks: 4
-Deadlocks detected: 1
-Processes killed: 1
-Total messages sent: 47
+Normal terminations: 3
+Requests: 31
+Granted: 23
+Blocked: 8
+Releases: 10
+Deadlock checks: 6
+Deadlocks detected: 2
+Processes killed: 2
+Total messages sent: 44

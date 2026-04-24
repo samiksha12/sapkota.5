@@ -11,7 +11,7 @@ using namespace std;
 
 #define PERMS 0644
 #define MAX_RES 10
-#define MAX_INST 1
+#define MAX_INST 5
 
 const int BILLION = 1000000000;
 const int BUFF_SZ = sizeof(int) * 2;
