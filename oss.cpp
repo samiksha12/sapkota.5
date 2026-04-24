@@ -17,7 +17,7 @@ using namespace std;
 
 #define PERMS 0644
 #define MAX_RES 10
-#define MAX_INST 5
+#define MAX_INST 1
 #define MAXIMUM_PROCESS 20
 
 const int BUFF_SZ = sizeof(int) * 2;
@@ -404,7 +404,7 @@ int main(int argc, char *argv[])
 
     logfile.open(logname);
 
-    shm_key = ftok("test-oss.cpp", 0);
+    shm_key = ftok("oss.cpp", 0);
     if (shm_key == -1)
     {
         perror("ftok shm");

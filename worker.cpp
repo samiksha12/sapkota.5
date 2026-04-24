@@ -11,7 +11,7 @@ using namespace std;
 
 #define PERMS 0644
 #define MAX_RES 10
-#define MAX_INST 5
+#define MAX_INST 1
 
 const int BILLION = 1000000000;
 const int BUFF_SZ = sizeof(int) * 2;
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 
     srand(getpid());
 
-    int shm_key = ftok("test-oss.cpp", 0);
+    int shm_key = ftok("oss.cpp", 0);
     if (shm_key == -1)
     {
         perror("ftok shm");
